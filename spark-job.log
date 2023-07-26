@@ -1,0 +1,1300 @@
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+-------+-------+---------+----+-----+----------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|Value|Flag Codes|
++--------+---------+-------+-------+---------+----+-----+----------+
+|     AUS|      PLI|    TOT|OECDIDX|        A|2018|  126|      null|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2019|  121|      null|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2020|  118|      null|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2021|  125|      null|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2022|  125|      null|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2020|  101|      null|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2021|  103|      null|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2020|   98|      null|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2021|  100|      null|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|
+|     CAN|      PLI|    TOT|OECDIDX|        A|2018|  107|      null|
+|     CAN|      PLI|    TOT|OECDIDX|        A|2019|  110|      null|
+|     CAN|      PLI|    TOT|OECDIDX|        A|2020|  108|      null|
+|     CAN|      PLI|    TOT|OECDIDX|        A|2021|  114|      null|
+|     CAN|      PLI|    TOT|OECDIDX|        A|2022|  120|      null|
++--------+---------+-------+-------+---------+----+-----+----------+
+only showing top 20 rows
+
++--------+---------+-------+----+-----+
+|LOCATION|INDICATOR|SUBJECT|TIME|Value|
++--------+---------+-------+----+-----+
+|     AUS|      PLI|    TOT|2018|  126|
+|     AUS|      PLI|    TOT|2019|  121|
+|     AUS|      PLI|    TOT|2020|  118|
+|     AUS|      PLI|    TOT|2021|  125|
+|     AUS|      PLI|    TOT|2022|  125|
+|     AUT|      PLI|    TOT|2018|  104|
+|     AUT|      PLI|    TOT|2019|   99|
+|     AUT|      PLI|    TOT|2020|  101|
+|     AUT|      PLI|    TOT|2021|  103|
+|     AUT|      PLI|    TOT|2022|   94|
+|     BEL|      PLI|    TOT|2018|  104|
+|     BEL|      PLI|    TOT|2019|   99|
+|     BEL|      PLI|    TOT|2020|   98|
+|     BEL|      PLI|    TOT|2021|  100|
+|     BEL|      PLI|    TOT|2022|   94|
+|     CAN|      PLI|    TOT|2018|  107|
+|     CAN|      PLI|    TOT|2019|  110|
+|     CAN|      PLI|    TOT|2020|  108|
+|     CAN|      PLI|    TOT|2021|  114|
+|     CAN|      PLI|    TOT|2022|  120|
++--------+---------+-------+----+-----+
+only showing top 20 rows
+
++-------+--------+---------+-------+------------------+------------------+
+|summary|LOCATION|INDICATOR|SUBJECT|              TIME|             Value|
++-------+--------+---------+-------+------------------+------------------+
+|  count|     235|      235|    235|               235|               235|
+|   mean|    null|     null|   null|            2020.0| 86.34468085106383|
+| stddev|    null|     null|   null|1.4172321646600383|28.196129398176886|
+|    min|     AUS|      PLI|    TOT|              2018|              35.0|
+|    max|     ZAF|      PLI|    TOT|              2022|             149.0|
++-------+--------+---------+-------+------------------+------------------+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                                                         |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, CRI, ESP, HUN, JPN, CAN, NOR, MEX, KOR, ISR, LVA, IND, LUX, LTU, BEL, CZE, ISL, POL, AUT, TUR, GBR, IDN, RUS, NLD, OECD, ITA, ZAF, SVN, DNK, CHL, EA18, CHE, EST, COL, AUS, GRC, EU27, BRA, SVK, DEU, NZL, PRT, CHN, FIN, SWE, USA, IRL]|
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[PLI]                 |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[TOT]               |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++------------------+
+|kurtosis(TIME)    |
++------------------+
+|-1.300000000000006|
++------------------+
+
++-------------------+
+|kurtosis(Value)    |
++-------------------+
+|-0.9428164727741226|
++-------------------+
+
++---------+
+|max(TIME)|
++---------+
+|2022     |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2018     |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|100       |
++----------+
+
++----------+
+|min(Value)|
++----------+
+|100       |
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|28.196129398176886|28.196129398176886|
++------------------+------------------+
+
++-----------------+-----------------+
+|var_samp(Value)  |var_samp(Value)  |
++-----------------+-----------------+
+|795.0217130387349|795.0217130387349|
++-----------------+-----------------+
+
++--------+---------+-------+-------+---------+----+-----+----------+----------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|Value|Flag Codes|price level rank|
++--------+---------+-------+-------+---------+----+-----+----------+----------------+
+|     AUS|      PLI|    TOT|OECDIDX|        A|2020|  118|      null|               1|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2019|  121|      null|               2|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2021|  125|      null|               3|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2022|  125|      null|               3|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2018|  126|      null|               5|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2020|  101|      null|               1|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2021|  103|      null|               2|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|               3|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|               4|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|               5|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2021|  100|      null|               1|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|               2|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|               3|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2020|   98|      null|               4|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|               5|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2020|   54|      null|               1|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2021|   54|      null|               1|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2022|   61|      null|               3|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2019|   68|      null|               4|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2018|   70|      null|               5|
++--------+---------+-------+-------+---------+----+-----+----------+----------------+
+only showing top 20 rows
+
++--------+---------+-------+-------+---------+----+-----+----------+------------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|Value|Flag Codes|price level percent_rank|
++--------+---------+-------+-------+---------+----+-----+----------+------------------------+
+|     AUS|      PLI|    TOT|OECDIDX|        A|2020|  118|      null|                     0.0|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2019|  121|      null|                    0.25|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2021|  125|      null|                     0.5|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2022|  125|      null|                     0.5|
+|     AUS|      PLI|    TOT|OECDIDX|        A|2018|  126|      null|                     1.0|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2020|  101|      null|                     0.0|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2021|  103|      null|                    0.25|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|                     0.5|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|                    0.75|
+|     AUT|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|                     1.0|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2021|  100|      null|                     0.0|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2018|  104|      null|                    0.25|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2022|   94|      null|                     0.5|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2020|   98|      null|                    0.75|
+|     BEL|      PLI|    TOT|OECDIDX|        A|2019|   99|      null|                     1.0|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2020|   54|      null|                     0.0|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2021|   54|      null|                     0.0|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2022|   61|      null|                     0.5|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2019|   68|      null|                    0.75|
+|     BRA|      PLI|    TOT|OECDIDX|        A|2018|   70|      null|                     1.0|
++--------+---------+-------+-------+---------+----+-----+----------+------------------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+-------+-------+---------+-------+--------+----------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|
++--------+---------+-------+-------+---------+-------+--------+----------+
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-04|8.366534|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-05| 9.01883|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-06|11.34328|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-07|12.22664|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-08|13.09524|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-09|13.87512|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-10|14.37008|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-11|15.21099|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2022-12|16.09756|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2023-01|16.99219|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2023-02| 16.1597|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2023-03|14.51311|      null|
+|     AUT|      CPI|   FOOD| AGRWTH|        M|2023-04|13.23529|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-04|7.170923|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-05|7.737512|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-06|8.674464|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-07|9.426628|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-08|9.320389|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-09|10.62802|      null|
+|     AUT|      CPI|    TOT| AGRWTH|        M|2022-10|11.04707|      null|
++--------+---------+-------+-------+---------+-------+--------+----------+
+only showing top 20 rows
+
++-------+--------+---------+------------+-------+------------------+
+|summary|LOCATION|INDICATOR|     SUBJECT|   TIME|             Value|
++-------+--------+---------+------------+-------+------------------+
+|  count|    1799|     1799|        1799|   1799|              1799|
+|   mean|    null|     null|        null|   null|12.510105870150083|
+| stddev|    null|     null|        null|   null|14.437679577106609|
+|    min|     ARG|      CPI|        FOOD|2022-04|        -0.2516419|
+|    max|     ZAF|      CPI|TOT_FOODENRG|2023-05|          114.9655|
++-------+--------+---------+------------+-------+------------------+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                                                                      |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, ESP, SAU, HUN, OECDE, EA19, JPN, CAN, NOR, MEX, KOR, ISR, LVA, IND, LUX, LTU, BEL, CZE, EU27_2020, ISL, POL, AUT, TUR, ARG, GBR, IDN, NLD, OECD, ITA, G-7, ZAF, SVN, DNK, CHL, CHE, EST, COL, G-20, GRC, BRA, SVK, DEU, PRT, CHN, FIN, SWE, USA, IRL]|
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[CPI]                 |
++----------------------+
+
++-------------------------+
+|collect_set(SUBJECT)     |
++-------------------------+
+|[TOT_FOODENRG, FOOD, TOT]|
++-------------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++--------------+
+|kurtosis(TIME)|
++--------------+
+|null          |
++--------------+
+
++------------------+
+|kurtosis(Value)   |
++------------------+
+|18.580556924141703|
++------------------+
+
++---------+
+|max(TIME)|
++---------+
+|2023-05  |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2022-04  |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|-0.2516419|
++----------+
+
++----------+
+|min(Value)|
++----------+
+|-0.2516419|
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|14.437679577106609|14.437679577106609|
++------------------+------------------+
+
++------------------+------------------+
+|var_samp(Value)   |var_samp(Value)   |
++------------------+------------------+
+|208.44659157120125|208.44659157120125|
++------------------+------------------+
+
++--------+---------+-------+-------+---------+-------+--------+----------+--------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|cpi rank|
++--------+---------+-------+-------+---------+-------+--------+----------+--------+
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-02|102.5008|      null|       1|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-02|102.6294|      null|       2|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-03|104.2965|      null|       3|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-03|106.6007|      null|       4|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-04|108.8341|      null|       5|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-04|114.9655|      null|       6|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-04|58.03801|      null|       7|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-05|60.67993|      null|       8|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-04|62.11133|      null|       9|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-06|63.98258|      null|      10|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-05|64.16824|      null|      11|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-06|66.35723|      null|      12|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-07|70.55806|      null|      13|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-07|71.00246|      null|      14|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-08|78.51527|      null|      15|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-08|79.98595|      null|      16|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-09|83.02998|      null|      17|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-09|86.61668|      null|      18|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-10|88.03568|      null|      19|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-10|91.58672|      null|      20|
++--------+---------+-------+-------+---------+-------+--------+----------+--------+
+only showing top 20 rows
+
++--------+---------+-------+-------+---------+-------+--------+----------+----------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|cpi percent_rank|
++--------+---------+-------+-------+---------+-------+--------+----------+----------------+
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-02|102.5008|      null|             0.0|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-02|102.6294|      null|            0.04|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-03|104.2965|      null|            0.08|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-03|106.6007|      null|            0.12|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2023-04|108.8341|      null|            0.16|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2023-04|114.9655|      null|             0.2|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-04|58.03801|      null|            0.24|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-05|60.67993|      null|            0.28|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-04|62.11133|      null|            0.32|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-06|63.98258|      null|            0.36|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-05|64.16824|      null|             0.4|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-06|66.35723|      null|            0.44|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-07|70.55806|      null|            0.48|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-07|71.00246|      null|            0.52|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-08|78.51527|      null|            0.56|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-08|79.98595|      null|             0.6|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-09|83.02998|      null|            0.64|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-09|86.61668|      null|            0.68|
+|     ARG|      CPI|    TOT| AGRWTH|        M|2022-10|88.03568|      null|            0.72|
+|     ARG|      CPI|   FOOD| AGRWTH|        M|2022-10|91.58672|      null|            0.76|
++--------+---------+-------+-------+---------+-------+--------+----------+----------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+--------+-------+---------+-------+--------+----------+
+|LOCATION|INDICATOR| SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|
++--------+---------+--------+-------+---------+-------+--------+----------+
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-01|98.65053|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-02|99.12756|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-03|99.98622|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-04|100.3678|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-05|100.3678|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-06|100.4633|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-07|100.4633|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-08|100.3678|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-09|100.4633|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-10|100.5587|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-11|100.5587|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-12|100.6541|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-01|100.8449|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-02|101.0357|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-03|101.6081|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-04|101.9898|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-05|101.8944|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-06|101.5127|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-07|101.3219|      null|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-08|101.8944|      null|
++--------+---------+--------+-------+---------+-------+--------+----------+
+only showing top 20 rows
+
++-------+--------+---------+--------+-------+------------------+
+|summary|LOCATION|INDICATOR| SUBJECT|   TIME|             Value|
++-------+--------+---------+--------+-------+------------------+
+|  count|    5751|     5751|    5751|   5751|              5751|
+|   mean|    null|     null|    null|   null|108.16966812554304|
+| stddev|    null|     null|    null|   null| 29.16728092937476|
+|    min|     AUT|      PPI|DOMESTIC|2011-01|          71.81463|
+|    max|     ZAF|      PPI|DOMESTIC|2023-01|          748.2839|
++-------+--------+---------+--------+-------+------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                             |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, CRI, ESP, HUN, OECDE, EA19, JPN, NOR, MEX, KOR, ISR, LVA, LUX, LTU, BEL, CZE, EU27_2020, ISL, POL, AUT, TUR, GBR, RUS, NLD, OECD, ITA, G-7, ZAF, SVN, DNK, CHE, COL, EST, GRC, SVK, DEU, PRT, FIN, SWE, IRL]|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[PPI]                 |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[DOMESTIC]          |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++--------------+
+|kurtosis(TIME)|
++--------------+
+|null          |
++--------------+
+
++----------------+
+|kurtosis(Value) |
++----------------+
+|248.899298358733|
++----------------+
+
++---------+
+|max(TIME)|
++---------+
+|2023-01  |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2011-01  |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|100       |
++----------+
+
++----------+
+|min(Value)|
++----------+
+|100       |
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|29.16728092937476 |29.16728092937476 |
++------------------+------------------+
+
++-----------------+-----------------+
+|var_samp(Value)  |var_samp(Value)  |
++-----------------+-----------------+
+|850.7302768130685|850.7302768130685|
++-----------------+-----------------+
+
++--------+---------+--------+-------+---------+-------+--------+----------+--------+
+|LOCATION|INDICATOR| SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|ppi rank|
++--------+---------+--------+-------+---------+-------+--------+----------+--------+
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-08|     100|      null|       1|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2016-12|   100.1|      null|       2|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-02|   100.2|      null|       3|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-07|   100.3|      null|       4|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-04|100.3678|      null|       5|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-05|100.3678|      null|       5|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-08|100.3678|      null|       5|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2014-12|100.3678|      null|       5|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-06|100.4633|      null|       9|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-07|100.4633|      null|       9|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-09|100.4633|      null|       9|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-03|   100.5|      null|      12|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-10|100.5587|      null|      13|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-11|100.5587|      null|      13|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-04|   100.6|      null|      15|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-12|100.6541|      null|      16|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-05|   100.8|      null|      17|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-06|   100.8|      null|      17|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-01|100.8449|      null|      19|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2017-01|   100.9|      null|      20|
++--------+---------+--------+-------+---------+-------+--------+----------+--------+
+only showing top 20 rows
+
++--------+---------+--------+-------+---------+-------+--------+----------+--------------------+
+|LOCATION|INDICATOR| SUBJECT|MEASURE|FREQUENCY|   TIME|   Value|Flag Codes|    ppi percent_rank|
++--------+---------+--------+-------+---------+-------+--------+----------+--------------------+
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-08|     100|      null|                 0.0|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2016-12|   100.1|      null|0.006993006993006993|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-02|   100.2|      null|0.013986013986013986|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-07|   100.3|      null| 0.02097902097902098|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-04|100.3678|      null|0.027972027972027972|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-05|100.3678|      null|0.027972027972027972|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-08|100.3678|      null|0.027972027972027972|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2014-12|100.3678|      null|0.027972027972027972|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-06|100.4633|      null|0.055944055944055944|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-07|100.4633|      null|0.055944055944055944|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-09|100.4633|      null|0.055944055944055944|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-03|   100.5|      null| 0.07692307692307693|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-10|100.5587|      null| 0.08391608391608392|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-11|100.5587|      null| 0.08391608391608392|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-04|   100.6|      null|  0.0979020979020979|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2011-12|100.6541|      null|  0.1048951048951049|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-05|   100.8|      null| 0.11188811188811189|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2015-06|   100.8|      null| 0.11188811188811189|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2012-01|100.8449|      null|  0.1258741258741259|
+|     AUT|      PPI|DOMESTIC|IDX2015|        M|2017-01|   100.9|      null| 0.13286713286713286|
++--------+---------+--------+-------+---------+-------+--------+----------+--------------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+-------+-------+---------+----+----------------+----------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|           Value|Flag Codes|
++--------+---------+-------+-------+---------+----+----------------+----------+
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2018|673616.626363316|      null|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2019|651798.401538175|      null|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2020|669373.015872199|      null|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2021|721230.747690427|      null|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2018|241762.643747646|      null|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2019|250651.747661318|      null|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2020|235698.068175331|      null|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2021|249667.684990529|      null|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2018|281506.127952642|      null|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2019|296381.036819848|      null|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2020|276242.081968597|      null|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2021|296816.051103821|      null|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2018|1005492.25755454|      null|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2019|1006631.75968554|      null|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2020|958319.933728673|      null|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2021| 1028622.7776182|      null|
+|     CZE|    HHEXP|    TOT|MLN_USD|        A|2018|183353.431293166|      null|
+|     CZE|    HHEXP|    TOT|MLN_USD|        A|2019|194992.042289678|      null|
+|     CZE|    HHEXP|    TOT|MLN_USD|        A|2020|176773.067911911|      null|
+|     CZE|    HHEXP|    TOT|MLN_USD|        A|2021| 186728.89165184|      null|
++--------+---------+-------+-------+---------+----+----------------+----------+
+only showing top 20 rows
+
++-------+--------+---------+-------+------------------+------------------+
+|summary|LOCATION|INDICATOR|SUBJECT|              TIME|             Value|
++-------+--------+---------+-------+------------------+------------------+
+|  count|     181|      181|    181|               181|               181|
+|   mean|    null|     null|   null| 2019.475138121547|1593573.3262660678|
+| stddev|    null|     null|   null|1.1133985049462114|  3032708.11829205|
+|    min|     AUS|    HHEXP|    TOT|              2018|  8996.15174917587|
+|    max|     ZAF|    HHEXP|    TOT|              2021|       1.5902575E7|
++-------+--------+---------+-------+------------------+------------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                                               |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, CRI, ESP, HUN, JPN, CAN, NOR, MEX, KOR, ISR, LVA, IND, LUX, LTU, BEL, CZE, ISL, POL, AUT, TUR, GBR, IDN, RUS, NLD, ITA, ZAF, SVN, DNK, CHL, CHE, COL, EST, AUS, GRC, EU, BRA, SVK, EA, DEU, NZL, PRT, CHN, FIN, SWE, USA, IRL]|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[HHEXP]               |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[TOT]               |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++------------------+
+|kurtosis(TIME)    |
++------------------+
+|-1.341853666361137|
++------------------+
+
++-----------------+
+|kurtosis(Value)  |
++-----------------+
+|7.603814184389291|
++-----------------+
+
++---------+
+|max(TIME)|
++---------+
+|2021     |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2018     |
++---------+
+
++----------------+
+|min(Value)      |
++----------------+
+|1005492.25755454|
++----------------+
+
++----------------+
+|min(Value)      |
++----------------+
+|1005492.25755454|
++----------------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|3032708.11829205  |3032708.11829205  |
++------------------+------------------+
+
++--------------------+--------------------+
+|var_samp(Value)     |var_samp(Value)     |
++--------------------+--------------------+
+|9.197318530754508E12|9.197318530754508E12|
++--------------------+--------------------+
+
++--------+---------+-------+-------+---------+----+----------------+----------+----------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|           Value|Flag Codes|Houshold spending rank|
++--------+---------+-------+-------+---------+----+----------------+----------+----------------------+
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2019|651798.401538175|      null|                     1|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2020|669373.015872199|      null|                     2|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2018|673616.626363316|      null|                     3|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2021|721230.747690427|      null|                     4|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2020|235698.068175331|      null|                     1|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2018|241762.643747646|      null|                     2|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2021|249667.684990529|      null|                     3|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2019|250651.747661318|      null|                     4|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2020|276242.081968597|      null|                     1|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2018|281506.127952642|      null|                     2|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2019|296381.036819848|      null|                     3|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2021|296816.051103821|      null|                     4|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2018|1921665.07665738|      null|                     1|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2020|1964058.50404417|      null|                     2|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2019|2006011.29394453|      null|                     3|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2018|1005492.25755454|      null|                     1|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2019|1006631.75968554|      null|                     2|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2021| 1028622.7776182|      null|                     3|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2020|958319.933728673|      null|                     4|
+|     CHE|    HHEXP|    TOT|MLN_USD|        A|2020|268995.590119749|      null|                     1|
++--------+---------+-------+-------+---------+----+----------------+----------+----------------------+
+only showing top 20 rows
+
++--------+---------+-------+-------+---------+----+----------------+----------+---------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|TIME|           Value|Flag Codes|spending percent_rank|
++--------+---------+-------+-------+---------+----+----------------+----------+---------------------+
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2019|651798.401538175|      null|                  0.0|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2020|669373.015872199|      null|   0.3333333333333333|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2018|673616.626363316|      null|   0.6666666666666666|
+|     AUS|    HHEXP|    TOT|MLN_USD|        A|2021|721230.747690427|      null|                  1.0|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2020|235698.068175331|      null|                  0.0|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2018|241762.643747646|      null|   0.3333333333333333|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2021|249667.684990529|      null|   0.6666666666666666|
+|     AUT|    HHEXP|    TOT|MLN_USD|        A|2019|250651.747661318|      null|                  1.0|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2020|276242.081968597|      null|                  0.0|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2018|281506.127952642|      null|   0.3333333333333333|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2019|296381.036819848|      null|   0.6666666666666666|
+|     BEL|    HHEXP|    TOT|MLN_USD|        A|2021|296816.051103821|      null|                  1.0|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2018|1921665.07665738|      null|                  0.0|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2020|1964058.50404417|      null|                  0.5|
+|     BRA|    HHEXP|    TOT|MLN_USD|        A|2019|2006011.29394453|      null|                  1.0|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2018|1005492.25755454|      null|                  0.0|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2019|1006631.75968554|      null|   0.3333333333333333|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2021| 1028622.7776182|      null|   0.6666666666666666|
+|     CAN|    HHEXP|    TOT|MLN_USD|        A|2020|958319.933728673|      null|                  1.0|
+|     CHE|    HHEXP|    TOT|MLN_USD|        A|2020|268995.590119749|      null|                  0.0|
++--------+---------+-------+-------+---------+----+----------------+----------+---------------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+----------+--------+---------+----+---------+----------+
+|LOCATION|INDICATOR|   SUBJECT| MEASURE|FREQUENCY|TIME|    Value|Flag Codes|
++--------+---------+----------+--------+---------+----+---------+----------+
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2005| 17.04691|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2006| 4.711068|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2007| 5.208654|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2008| 4.920554|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2009|  7.64226|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2010| -9.78006|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2011|-3.860836|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2012|-9.890769|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2013|-3.719274|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2014|-1.976076|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2015| 5.127503|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2016|-1.629265|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2017|-3.275181|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2018|-2.439415|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2019| 4.610584|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2020| 13.32606|      null|
+|     GRC|     HHFT|NETBALANCE|PC_NHHDI|        A|2021| 9.059594|      null|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2005| 8.583223|      null|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2006| 8.990784|      null|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2007| 10.08265|      null|
++--------+---------+----------+--------+---------+----+---------+----------+
+only showing top 20 rows
+
++-------+--------+---------+----------+------------------+----------------+
+|summary|LOCATION|INDICATOR|   SUBJECT|              TIME|           Value|
++-------+--------+---------+----------+------------------+----------------+
+|  count|     585|      585|       585|               585|             585|
+|   mean|    null|     null|      null|2013.1982905982907|4.43350534153846|
+| stddev|    null|     null|      null|   4.8844522502806|  6.093238409484|
+|    min|     AUS|     HHFT|NETBALANCE|              2005|       -18.99586|
+|    max|     ZAF|     HHFT|NETBALANCE|              2022|        22.12644|
++-------+--------+---------+----------+------------------+----------------+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                               |
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, ESP, HUN, JPN, CAN, NOR, MEX, KOR, LVA, LUX, LTU, BEL, CZE, POL, AUT, GBR, RUS, NLD, ITA, ZAF, SVN, DNK, CHL, CHE, EST, COL, AUS, GRC, BRA, SVK, DEU, PRT, FIN, SWE, USA, IRL]|
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[HHFT]                |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[NETBALANCE]        |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++-------------------+
+|kurtosis(TIME)     |
++-------------------+
+|-1.1798874527780867|
++-------------------+
+
++------------------+
+|kurtosis(Value)   |
++------------------+
+|1.1568287741318253|
++------------------+
+
++---------+
+|max(TIME)|
++---------+
+|2022     |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2005     |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|-0.0068384|
++----------+
+
++----------+
+|min(Value)|
++----------+
+|-0.0068384|
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|6.093238409484    |6.093238409484    |
++------------------+------------------+
+
++-----------------+-----------------+
+|var_samp(Value)  |var_samp(Value)  |
++-----------------+-----------------+
+|37.12755431481111|37.12755431481111|
++-----------------+-----------------+
+
++--------+---------+----------+--------+---------+----+--------+----------+--------------------------+
+|LOCATION|INDICATOR|   SUBJECT| MEASURE|FREQUENCY|TIME|   Value|Flag Codes|Household Transaction rank|
++--------+---------+----------+--------+---------+----+--------+----------+--------------------------+
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2005| -1.0619|      null|                         1|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2010|1.429193|      null|                         2|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2011|1.974618|      null|                         3|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2019| 10.8687|      null|                         4|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2008|12.44112|      null|                         5|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2020|15.94292|      null|                         6|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2006| 4.13125|      null|                         7|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2017|4.242931|      null|                         8|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2009|5.171664|      null|                         9|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2016|5.627474|      null|                        10|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2018|5.861479|      null|                        11|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2014|7.336571|      null|                        12|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2007|7.459171|      null|                        13|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2015|8.038414|      null|                        14|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2021| 8.20972|      null|                        15|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2012|8.901869|      null|                        16|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2013|9.804048|      null|                        17|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2007|10.08265|      null|                         1|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2013|3.355457|      null|                         2|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2015| 3.73807|      null|                         3|
++--------+---------+----------+--------+---------+----+--------+----------+--------------------------+
+only showing top 20 rows
+
++--------+---------+----------+--------+---------+----+--------+----------+------------------------------+
+|LOCATION|INDICATOR|   SUBJECT| MEASURE|FREQUENCY|TIME|   Value|Flag Codes|transaction level percent_rank|
++--------+---------+----------+--------+---------+----+--------+----------+------------------------------+
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2005| -1.0619|      null|                           0.0|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2010|1.429193|      null|                        0.0625|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2011|1.974618|      null|                         0.125|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2019| 10.8687|      null|                        0.1875|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2008|12.44112|      null|                          0.25|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2020|15.94292|      null|                        0.3125|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2006| 4.13125|      null|                         0.375|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2017|4.242931|      null|                        0.4375|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2009|5.171664|      null|                           0.5|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2016|5.627474|      null|                        0.5625|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2018|5.861479|      null|                         0.625|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2014|7.336571|      null|                        0.6875|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2007|7.459171|      null|                          0.75|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2015|8.038414|      null|                        0.8125|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2021| 8.20972|      null|                         0.875|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2012|8.901869|      null|                        0.9375|
+|     AUS|     HHFT|NETBALANCE|PC_NHHDI|        A|2013|9.804048|      null|                           1.0|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2007|10.08265|      null|                           0.0|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2013|3.355457|      null|                        0.0625|
+|     AUT|     HHFT|NETBALANCE|PC_NHHDI|        A|2015| 3.73807|      null|                         0.125|
++--------+---------+----------+--------+---------+----+--------+----------+------------------------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+-------+-------+---------+-------+-----+----------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|
++--------+---------+-------+-------+---------+-------+-----+----------+
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-01|  3.6|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-02| 3.88|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-03| 4.26|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-04| 5.01|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-05| 5.37|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-06| 5.55|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-07| 5.56|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-08| 5.35|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-09| 5.28|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-10| 5.14|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2011-11| 5.11|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-01| 4.84|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-02| 4.98|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-03| 5.07|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-04| 5.05|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-05| 5.16|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2012-09| 4.96|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2013-01| 5.08|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2013-04| 5.03|      null|
+|     CHL|    STINT|    TOT|  PC_PA|        M|2013-05| 4.98|      null|
++--------+---------+-------+-------+---------+-------+-----+----------+
+only showing top 20 rows
+
++-------+--------+---------+-------+-------+------------------+
+|summary|LOCATION|INDICATOR|SUBJECT|   TIME|             Value|
++-------+--------+---------+-------+-------+------------------+
+|  count|    6736|     6736|   6736|   6736|              6736|
+|   mean|    null|     null|   null|   null| 1.761163337125893|
+| stddev|    null|     null|   null|   null|2.6083211410374774|
+|    min|     AUS|    STINT|    TOT|2011-01|             -1.15|
+|    max|     ZAF|    STINT|    TOT|2023-05|             21.91|
++-------+--------+---------+-------+-------+------------------+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                                                  |
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, CRI, ESP, HUN, EA19, BGR, JPN, CAN, NOR, MEX, ISR, KOR, LVA, HRV, IND, LUX, LTU, BEL, CZE, ISL, POL, AUT, GBR, RUS, IDN, NLD, ITA, ZAF, SVN, DNK, CHL, CHE, EST, COL, AUS, GRC, SVK, NZL, DEU, PRT, ROU, CHN, FIN, SWE, USA, IRL]|
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[STINT]               |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[TOT]               |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++--------------+
+|kurtosis(TIME)|
++--------------+
+|null          |
++--------------+
+
++-----------------+
+|kurtosis(Value)  |
++-----------------+
+|3.378850436376177|
++-----------------+
+
++---------+
+|max(TIME)|
++---------+
+|2023-05  |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2011-01  |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|-0.006    |
++----------+
+
++----------+
+|min(Value)|
++----------+
+|-0.006    |
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|2.6083211410374774|2.6083211410374774|
++------------------+------------------+
+
++-----------------+-----------------+
+|var_samp(Value)  |var_samp(Value)  |
++-----------------+-----------------+
+|6.803339174783048|6.803339174783048|
++-----------------+-----------------+
+
++--------+---------+-------+-------+---------+-------+-----+----------+-------------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|short term interests rank|
++--------+---------+-------+-------+---------+-------+-----+----------+-------------------------+
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-01| 0.01|      null|                        1|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-02| 0.01|      null|                        1|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-08| 0.01|      null|                        1|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-09| 0.01|      null|                        1|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-11| 0.02|      null|                        5|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-12| 0.02|      null|                        5|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-07| 0.02|      null|                        5|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-03| 0.03|      null|                        8|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-06| 0.03|      null|                        8|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-04| 0.04|      null|                       10|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-05| 0.04|      null|                       10|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-10| 0.04|      null|                       10|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-11| 0.04|      null|                       10|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-12| 0.06|      null|                       14|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-10| 0.07|      null|                       15|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2022-01| 0.07|      null|                       15|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2022-02| 0.07|      null|                       15|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-09| 0.09|      null|                       18|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-05|  0.1|      null|                       19|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-06|  0.1|      null|                       19|
++--------+---------+-------+-------+---------+-------+-----+----------+-------------------------+
+only showing top 20 rows
+
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|s-t interests  percent_rank|
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-01| 0.01|      null|                        0.0|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-02| 0.01|      null|                        0.0|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-08| 0.01|      null|                        0.0|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-09| 0.01|      null|                        0.0|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-11| 0.02|      null|        0.02702702702702703|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-12| 0.02|      null|        0.02702702702702703|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-07| 0.02|      null|        0.02702702702702703|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-03| 0.03|      null|         0.0472972972972973|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-06| 0.03|      null|         0.0472972972972973|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-04| 0.04|      null|       0.060810810810810814|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-05| 0.04|      null|       0.060810810810810814|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-10| 0.04|      null|       0.060810810810810814|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-11| 0.04|      null|       0.060810810810810814|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2021-12| 0.06|      null|        0.08783783783783784|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-10| 0.07|      null|         0.0945945945945946|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2022-01| 0.07|      null|         0.0945945945945946|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2022-02| 0.07|      null|         0.0945945945945946|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-09| 0.09|      null|        0.11486486486486487|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-05|  0.1|      null|        0.12162162162162163|
+|     AUS|    STINT|    TOT|  PC_PA|        M|2020-06|  0.1|      null|        0.12162162162162163|
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+only showing top 20 rows
+
+root
+ |-- LOCATION: string (nullable = true)
+ |-- INDICATOR: string (nullable = true)
+ |-- SUBJECT: string (nullable = true)
+ |-- MEASURE: string (nullable = true)
+ |-- FREQUENCY: string (nullable = true)
+ |-- TIME: string (nullable = true)
+ |-- Value: string (nullable = true)
+ |-- Flag Codes: string (nullable = true)
+
++--------+---------+-------+-------+---------+-------+-----+----------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|
++--------+---------+-------+-------+---------+-------+-----+----------+
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-01| 4.04|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-02| 4.07|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-03| 3.97|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-04| 4.19|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-05| 4.32|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-06| 4.62|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-07| 4.59|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-08|  4.4|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-09| 4.32|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-10| 4.39|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-11| 4.31|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2007-12| 4.45|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-01| 4.25|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-02| 4.21|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-03| 4.17|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-04| 4.44|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-05| 4.58|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-06| 4.91|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-07| 4.92|      null|
+|     IRL|    LTINT|    TOT|  PC_PA|        M|2008-08| 4.59|      null|
++--------+---------+-------+-------+---------+-------+-----+----------+
+only showing top 20 rows
+
++-------+--------+---------+-------+-------+------------------+
+|summary|LOCATION|INDICATOR|SUBJECT|   TIME|             Value|
++-------+--------+---------+-------+-------+------------------+
+|  count|    8676|     8676|   8676|   8676|              8676|
+|   mean|    null|     null|   null|   null|3.6890632063485658|
+| stddev|    null|     null|   null|   null| 2.932595904902102|
+|    min|     AUS|    LTINT|    TOT|2007-01|            -0.975|
+|    max|     ZAF|    LTINT|    TOT|2023-05|             29.24|
++-------+--------+---------+-------+-------+------------------+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|collect_set(LOCATION)                                                                                                                                                                                                                       |
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|[FRA, CRI, ESP, HUN, EA19, BGR, JPN, CAN, NOR, MEX, ISR, KOR, LVA, HRV, IND, LUX, LTU, CZE, BEL, ISL, POL, AUT, GBR, RUS, IDN, NLD, ITA, ZAF, SVN, DNK, CHL, CHE, COL, EST, AUS, GRC, BRA, SVK, DEU, NZL, PRT, ROU, CHN, FIN, SWE, USA, IRL]|
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
++----------------------+
+|collect_set(INDICATOR)|
++----------------------+
+|[LTINT]               |
++----------------------+
+
++--------------------+
+|collect_set(SUBJECT)|
++--------------------+
+|[TOT]               |
++--------------------+
+
++------------------+
+|kurtosis(LOCATION)|
++------------------+
+|null              |
++------------------+
+
++-------------------+
+|kurtosis(INDICATOR)|
++-------------------+
+|null               |
++-------------------+
+
++-----------------+
+|kurtosis(SUBJECT)|
++-----------------+
+|null             |
++-----------------+
+
++--------------+
+|kurtosis(TIME)|
++--------------+
+|null          |
++--------------+
+
++-----------------+
+|kurtosis(Value)  |
++-----------------+
+|3.302376029223497|
++-----------------+
+
++---------+
+|max(TIME)|
++---------+
+|2023-05  |
++---------+
+
++---------+
+|min(TIME)|
++---------+
+|2007-01  |
++---------+
+
++----------+
+|min(Value)|
++----------+
+|-0.0003   |
++----------+
+
++----------+
+|min(Value)|
++----------+
+|-0.0003   |
++----------+
+
++------------------+------------------+
+|stddev_samp(Value)|stddev_samp(Value)|
++------------------+------------------+
+|2.932595904902102 |2.932595904902102 |
++------------------+------------------+
+
++----------------+----------------+
+|var_samp(Value) |var_samp(Value) |
++----------------+----------------+
+|8.60011874144858|8.60011874144858|
++----------------+----------------+
+
++--------+---------+-------+-------+---------+-------+-----+----------+------------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|long term interests rank|
++--------+---------+-------+-------+---------+-------+-----+----------+------------------------+
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-10| 0.82|      null|                       1|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-04| 0.86|      null|                       2|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-11| 0.87|      null|                       3|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-07| 0.88|      null|                       4|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-03| 0.89|      null|                       5|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-08| 0.89|      null|                       5|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-09|  0.9|      null|                       7|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-05| 0.91|      null|                       8|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-06| 0.92|      null|                       9|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-08| 0.95|      null|                      10|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-02| 0.98|      null|                      11|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-12| 0.98|      null|                      11|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-09| 1.03|      null|                      13|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-10| 1.03|      null|                      13|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-01| 1.05|      null|                      15|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-08| 1.14|      null|                      16|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-11| 1.15|      null|                      17|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-01| 1.15|      null|                      17|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-12|  1.2|      null|                      19|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-07| 1.25|      null|                      20|
++--------+---------+-------+-------+---------+-------+-----+----------+------------------------+
+only showing top 20 rows
+
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+|LOCATION|INDICATOR|SUBJECT|MEASURE|FREQUENCY|   TIME|Value|Flag Codes|l-t interests  percent_rank|
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-10| 0.82|      null|                        0.0|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-04| 0.86|      null|        0.00510204081632653|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-11| 0.87|      null|        0.01020408163265306|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-07| 0.88|      null|       0.015306122448979591|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-03| 0.89|      null|        0.02040816326530612|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-08| 0.89|      null|        0.02040816326530612|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-09|  0.9|      null|       0.030612244897959183|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-05| 0.91|      null|        0.03571428571428571|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-06| 0.92|      null|        0.04081632653061224|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-08| 0.95|      null|        0.04591836734693878|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-02| 0.98|      null|        0.05102040816326531|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-12| 0.98|      null|        0.05102040816326531|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-09| 1.03|      null|       0.061224489795918366|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-10| 1.03|      null|       0.061224489795918366|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-01| 1.05|      null|        0.07142857142857142|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-08| 1.14|      null|        0.07653061224489796|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-11| 1.15|      null|        0.08163265306122448|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2020-01| 1.15|      null|        0.08163265306122448|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2019-12|  1.2|      null|        0.09183673469387756|
+|     AUS|    LTINT|    TOT|  PC_PA|        M|2021-07| 1.25|      null|        0.09693877551020408|
++--------+---------+-------+-------+---------+-------+-----+----------+---------------------------+
+only showing top 20 rows
+
