@@ -16,7 +16,7 @@ from pyspark.sql.window import Window
 #from pyspark.sql.window import windowSpec
 
 #spark = SparkSession.builder.master("local[1]").appName("kidney_disease").getOrCreate()
-#data = spark.read.option("header", True).csv("data/kidney_disease.csv") # header가 있는 경우, option 구문 추가 
+#data = spark.read.option("header", True).csv("data/kidney_disease.csv")  
 
 spark = SparkSession \
         .builder \
