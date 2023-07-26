@@ -7,7 +7,7 @@ $SPARK_HOME/bin/spark-submit --master spark://DESKTOP-SD3IP3U.localdomain:7077 /
 
 
 MORE INFO. :
-https://juny2312.github.io/generic2-1.html
+https://juny2312.github.io/generic2-1.html \
 https://juny2312.github.io/generic2.html
 
 Data Resource from OECD 
